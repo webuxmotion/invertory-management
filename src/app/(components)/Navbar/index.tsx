@@ -4,7 +4,7 @@ import { Bell, MenuIcon, Moon, Settings, Sun } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import useSidebar from '@/app/hooks/useSidebar'
-import useDarkMode from '@/app/hooks/useDarkmode'
+import useDarkMode from '@/app/hooks/useDarkMode'
 
 
 const Navbar = () => {
