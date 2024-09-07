@@ -1,16 +1,15 @@
 "use client"
 
-import useSidebar from '@/app/hooks/useSidebar'
-import { Bell, MenuIcon, Settings, Sun } from 'lucide-react'
+import { Bell, MenuIcon, Moon, Settings, Sun } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+import useSidebar from '@/app/hooks/useSidebar'
+import useDarkMode from '@/app/hooks/useDarkmode'
+
 
 const Navbar = () => {
-    const { 
-        isSidebarCollapsed,
-        toggleSidebar
-      } = useSidebar();
-
+    const { toggleSidebar } = useSidebar();
+    const { toggleDarkMode, isDarkMode } = useDarkMode();
 
   return (
     <div className='flex justify-between items-center w-full mb-7'>
@@ -40,8 +39,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center gap-5">
             <div className="hidden md:flex justify-between items-center gap-5">
                 <div>
-                    <button onClick={() => {}}>
-                        <Sun className='cutsor-pointer text-gray-500' size={24} />
+                    <button onClick={toggleDarkMode}>
+                        {isDarkMode ? (
+                            <Sun className='cutsor-pointer text-gray-500' size={24} />
+                        ): (
+                            <Moon className='cutsor-pointer text-gray-500' size={24} />
+                        )}
+                        
                     </button>
                 </div>
                 <div className="relative">

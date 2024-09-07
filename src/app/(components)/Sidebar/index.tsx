@@ -3,6 +3,9 @@
 import useSidebar from '@/app/hooks/useSidebar';
 import { Menu } from 'lucide-react';
 import React from 'react'
+import SidebarLink from './SidebarLink';
+import { sidebarLinks } from './sidebarLinks';
+
 
 const Sidebar = () => {
   const { 
@@ -29,11 +32,19 @@ const Sidebar = () => {
 
       {/* LINKS */}
       <div className="flex-grow mt-8">
-        links
+        {sidebarLinks.map((linkItem, index) => (
+          <SidebarLink
+            key={index}
+            href={linkItem.href}
+            label={linkItem.label}
+            icon={linkItem.icon}
+            isCollapsed={isSidebarCollapsed}
+          />
+        ))}
       </div>
 
       {/* FOOTER */}
-      <div>
+      <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-10`}>
         <p className='text-center text-xs text-gray-500'>&copy; 2024 Edstock</p>
       </div>
     </div>
