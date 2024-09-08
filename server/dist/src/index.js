@@ -10,7 +10,7 @@ const cors_1 = __importDefault(require("cors"));
 const helmet_1 = __importDefault(require("helmet"));
 const morgan_1 = __importDefault(require("morgan"));
 /* ROUTE IMPORTS */
-// import dashboardRoutes from "./routes/dashboardRoutes";
+const dashboardRoutes_1 = __importDefault(require("./routes/dashboardRoutes"));
 // import productRoutes from "./routes/productRoutes";
 // import userRoutes from "./routes/userRoutes";
 // import expenseRoutes from "./routes/expenseRoutes";
@@ -28,7 +28,7 @@ app.use((0, cors_1.default)());
 app.get("/hello", (req, res) => {
     res.send("hello world");
 });
-// app.use("/dashboard", dashboardRoutes); // http://localhost:8000/dashboard
+app.use("/dashboard", dashboardRoutes_1.default); // http://localhost:8000/dashboard
 // app.use("/products", productRoutes); // http://localhost:8000/products
 // app.use("/users", userRoutes); // http://localhost:8000/users
 // app.use("/expenses", expenseRoutes); // http://localhost:8000/expenses
