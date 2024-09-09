@@ -11,7 +11,7 @@ export const sidebarLinks: LinkProps[] = [
       icon: Layout
     },
     {
-      label: "Invertory",
+      label: "Inventory",
       href: "/inventory",
       icon: Archive
     },
