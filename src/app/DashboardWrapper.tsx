@@ -3,7 +3,7 @@
 import React, { ReactNode, useEffect } from 'react'
 import Navbar from "@/app/(components)/Navbar";
 import Sidebar from '@/app/(components)/Sidebar';
-import StoreProvider, { useAppSelector } from './redux';
+import StoreProvider, { useAppSelector } from '../state/redux';
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
   const { isSidebarCollapsed, isDarkMode } = useAppSelector((state) => state.global);

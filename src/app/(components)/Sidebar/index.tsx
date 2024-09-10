@@ -1,6 +1,6 @@
 "use client"
 
-import useSidebar from '@/app/hooks/useSidebar';
+import useSidebar from '@/hooks/useSidebar';
 import { Menu } from 'lucide-react';
 import React from 'react'
 import SidebarLink from './SidebarLink';

@@ -6,8 +6,7 @@ import {
   useSelector,
   Provider,
 } from "react-redux";
-import globalReducer from "@/app/state";
-import { api } from "@/app/state/api";
+import globalReducer from "@/state";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
 import {
@@ -22,6 +21,7 @@ import {
 } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
+import { api } from "./api";
 
 /* REDUX PERSISTENCE */
 const createNoopStorage = () => {

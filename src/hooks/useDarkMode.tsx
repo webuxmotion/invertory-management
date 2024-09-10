@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from "@/app/redux";
-import { setIsDarkMode } from '@/app/state';
+import { useAppDispatch, useAppSelector } from "@/state/redux";
+import { setIsDarkMode } from '@/state';
 
 export default function useDarkMode() {
     const dispatch = useAppDispatch();

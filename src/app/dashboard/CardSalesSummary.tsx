@@ -9,7 +9,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { useGetDashboardMetricsQuery } from "../state/api";
+import { useGetDashboardMetricsQuery } from "../../state/api";
 
 const CardSalesSummary = () => {
   const { data, isLoading, isError } = useGetDashboardMetricsQuery();
